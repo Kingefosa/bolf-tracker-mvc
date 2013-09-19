@@ -155,10 +155,11 @@
     <Compile Include="Controllers\HoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\ShotController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ApiShot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,11 +206,19 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BolfTracker.Core\BolfTracker.Core.csproj">
+      <Project>{a8bd7def-773e-4391-81ef-8330084ac454}</Project>
+      <Name>BolfTracker.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolfTracker.Infrastructure.EntityFramework\BolfTracker.Infrastructure.EntityFramework.csproj">
+      <Project>{aac59f10-b95a-4b08-9557-1218b72db341}</Project>
+      <Name>BolfTracker.Infrastructure.EntityFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
